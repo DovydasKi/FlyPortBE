@@ -14,10 +14,6 @@
     <name>flyport</name>
     <description>FlyPort</description>
 
-    <properties>
-        <java.version>3.8.1</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
