@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class LoginDB {
     private JDBCLogin jdbc = new JDBCLogin();
 
-    public ResultSet login(Login login) throws SQLException, ClassNotFoundException {
+    public ResultSet login(Login login) throws Exception {
         jdbc.beginDBSession();
         String query = "SELECT USER_ID FROM USER_LOGIN WHERE EMAIL = ? AND PASSWORD = ?";
         PreparedStatement preparedStatement = jdbc.connection.prepareStatement(query);

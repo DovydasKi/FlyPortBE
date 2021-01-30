@@ -15,7 +15,7 @@ public class LoginController {
     private Gson parser = new Gson();
 
     @PostMapping("/login")
-    public String login(@RequestBody Login login) throws ClassNotFoundException, SQLException {
+    public String login(@RequestBody Login login) throws Exception {
         ResultSet resultSet = loginDb.login(login);
 
         if(resultSet.next()) {
