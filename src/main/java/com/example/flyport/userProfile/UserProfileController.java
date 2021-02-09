@@ -27,12 +27,12 @@ public class UserProfileController {
 
         ResultSet resultSet = preparedStatement.executeQuery();
         if (resultSet.next()) {
-            String email = resultSet.getString(2);
-            String password = resultSet.getString(3);
-            String name = resultSet.getString(5);
-            String surname = resultSet.getString(6);
-            String personalCode = resultSet.getString(7);
-            String documentNumber = resultSet.getString(8);
+            String name = resultSet.getString(2);
+            String surname = resultSet.getString(3);
+            String personalCode = resultSet.getString(4);
+            String documentNumber = resultSet.getString(5);
+            String email = resultSet.getString(7);
+            String password = resultSet.getString(8);
 
             UserLoginInfoModel userLoginInfoModel = new UserLoginInfoModel(email, password);
             UserPersonalInfoModel userPersonalInfoModel = new UserPersonalInfoModel(name, surname, personalCode, documentNumber);
